@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Agent Guardrails",
+    "description": "Screen every prompt, tool call and reply with Clef-flash before your agent acts.",
+    "models": ["clef-flash"],
+    "repo": "https://github.com/vnikhilbuddhavarapu/ppug-yvr-agent-guardrails"
+  },
+  {
+    "name": "Threat Hunter",
+    "description": "Render any URL with Browser Run, judge it with Clef and pull out IOCs with Clairic.",
+    "models": ["clef", "clairic"],
+    "repo": "https://github.com/vnikhilbuddhavarapu/ppug-yvr-threat-hunter"
+  },
+  {
+    "name": "DLP Redactor",
+    "description": "Find and redact sensitive data before an LLM ever sees it, with Clef-flash and Clairic.",
+    "models": ["clef-flash", "clairic"],
+    "repo": "https://github.com/vnikhilbuddhavarapu/ppug-yvr-dlp-redactor"
+  }
+]
