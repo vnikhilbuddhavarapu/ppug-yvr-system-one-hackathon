@@ -1,0 +1,29 @@
+README.md
+  s_021c12b20a1c5e::t_a8053b3fa5588c 1-105
+cards.json
+  s_1114865c0cfc07::t_94d105b4b73e70 1-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "7943c6957eef1535653c2bb5b0ab08077dd7dbd3",
+  "prompts": {},
+  "sessions": {
+    "s_021c12b20a1c5e": {
+      "agent_id": {
+        "tool": "windsurf",
+        "id": "zany-bayberry",
+        "model": "unknown"
+      },
+      "human_author": "Nikhil <vnikhilbuddhavarapu@outlook.com>"
+    },
+    "s_1114865c0cfc07": {
+      "agent_id": {
+        "tool": "devin",
+        "id": "s_1114865c0cfc07",
+        "model": "unknown"
+      },
+      "human_author": "Nikhil <vnikhilbuddhavarapu@outlook.com>"
+    }
+  }
+}
