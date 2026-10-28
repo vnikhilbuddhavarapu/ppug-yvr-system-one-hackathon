@@ -1,6 +1,6 @@
 # Cloudflare Peer Point Vancouver: System One Hackathon
 
-Build an AI agent that thinks fast. In about 90 minutes you'll take a working, stateful agent and teach it to
+Build an AI agent that thinks fast. In about two hours you'll take a working, stateful agent and teach it to
 make decisions with Cloudflare's new **System One** models, then demo what you built.
 
 ## The idea in one minute
@@ -33,12 +33,37 @@ further.
 | [**Threat Hunter**](https://github.com/vnikhilbuddhavarapu/ppug-yvr-threat-hunter)       | Opens any URL in a real browser, judges it, and pulls out indicators of compromise | Browser Run, Clef (vision), Clairic, R2 |
 | [**DLP Redactor**](https://github.com/vnikhilbuddhavarapu/ppug-yvr-dlp-redactor)         | Finds and redacts sensitive data before the LLM ever sees it                       | Clef-flash, Clairic spans, R2           |
 
-Each repo's README has the checkpoints, hints and stretch goals. The same list is in
-[`cards.json`](cards.json).
+Each repo's README walks you through the build:
+
+- **Checkpoint 0** already works: run it, deploy it, read it.
+- **Checkpoints 1 and 2** are scaffolded features, about 30-40 minutes each.
+- **Checkpoint 3 is the boss level**, a bigger build that fills the rest of the time and makes the demo.
+
+The same list is in [`cards.json`](cards.json).
+
+## Bring your own use case
+
+Got a better idea? Go for it. Pick any starter as your base (the agent, UI, Decision Trace and AI Gateway
+wiring are all reusable) and build your own thing. Two ground rules:
+
+1. **Use at least one System One model** (Clef, Clef-flash, Clef-omni or Clairic) for a real decision or
+   extraction, not just decoration.
+2. **Demo it running.** A deployed `workers.dev` URL is best.
+
+Need inspiration?
+
+- **Support triage:** Clairic pulls the order id, amount and dates out of a ticket, Clef picks the team,
+  urgency and refund-or-repair, and the LLM drafts the reply.
+- **Receipt and invoice inbox:** Clairic reads totals, due dates and line items from text or photos;
+  Clef approves, flags or rejects.
+- **Content moderation:** Clef-omni judges images, audio clips or short videos against your policy.
+- **Tool router:** let Clef pick which tool or sub-agent should handle a request before the LLM runs.
+- **Lead scoring:** Clairic `estimate` fields give a value with an 80% interval; rank the leads in code.
 
 ## Before you start
 
-- **A Cloudflare account.** We'll hand you one with everything enabled; you won't pay for anything.
+- **Accept your Lab invite.** Check your inbox: it gives you a Cloudflare account with everything enabled,
+  and you won't pay for anything.
 - **[Node.js](https://nodejs.org/) 24+** and **[Git](https://git-scm.com/)**.
 - **OpenCode (optional, recommended).** Install it from [ppug-opencode.cf.prompt2prod.dev](https://ppug-opencode.cf.prompt2prod.dev).
   Each starter ships an `AGENTS.md` so your coding agent knows the codebase.
@@ -59,11 +84,11 @@ there with its probabilities, latency and cost.
 
 ## How the day runs
 
-1. **Kickoff (about 15 min):** System One in a nutshell, and a live demo.
-2. **Setup (about 10 min):** pick a challenge, clone it, deploy Checkpoint 0.
-3. **Build (about 90 min):** checkpoints, stretch goals, or your own idea.
-4. **Demos (3 min each):** show it running, ideally on your live `workers.dev` URL.
-5. **Winners:** the top 3 for **creativity** take home swag.
+1. **Kickoff (30 min):** System One in a nutshell, a refresher on the agent you start with, and a live demo.
+2. **Build (2 hours):** set up and deploy Checkpoint 0, then Checkpoints 1, 2 and the Checkpoint 3 boss level,
+   or bring your own use case.
+3. **Demos (30 min):** 3 minutes each; show it running, ideally on your live `workers.dev` URL.
+4. **Winners:** the top 3 for **creativity** take home swag.
 
 Going off-script is encouraged. The best demos usually start from a checkpoint and end somewhere nobody expected.
 
